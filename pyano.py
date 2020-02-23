@@ -1,8 +1,6 @@
 from tkinter import *
 import time
-import datetime
 import pygame
-import json
 import pathlib
 import os
 
