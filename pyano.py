@@ -137,8 +137,6 @@ def vider():
     btnRejouer.config(cursor="")
     btnEnregistrer.config(state=DISABLED)
     btnEnregistrer.config(cursor="")
-    btnSupprimerEnregistrement.config(state=DISABLED)
-    btnSupprimerEnregistrement.config(cursor="")
 
 
 # ================================================= Fonction enregistrement ===================================================#
@@ -189,16 +187,10 @@ def supprimer_enregistrement():
     file = pathlib.Path("pyano_partition_recorded.txt")
     if file.exists():
         open("pyano_partition_recorded.txt", "w").close()
-        global notes
-        notes = []
         btnSupprimerEnregistrement.config(state=DISABLED)
+        btnSupprimerEnregistrement.config(cursor="")
         btnJouerEnregistrement.config(state=DISABLED)
-        btnVider.config(state=DISABLED)
-        btnVider.config(cursor="")
-        btnRejouer.config(state=DISABLED)
-        btnRejouer.config(cursor="")
-        btnEnregistrer.config(state=DISABLED)
-        btnEnregistrer.config(cursor="")
+        btnJouerEnregistrement.config(cursor="")
     else:
         btnSupprimerEnregistrement.config(state=DISABLED)
         btnSupprimerEnregistrement.config(cursor="")
