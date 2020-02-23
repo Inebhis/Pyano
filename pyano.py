@@ -300,13 +300,6 @@ btnJouerEnregistrement = Button(
 )
 btnJouerEnregistrement.grid(row=0, column=2, pady=1)
 
-if os.stat("pyano_partition_recorded.txt").st_size == 0:
-    btnJouerEnregistrement.config(state=DISABLED)
-    btnJouerEnregistrement.config(cursor="")
-else:
-    btnJouerEnregistrement.config(state=NORMAL)
-    btnJouerEnregistrement.config(cursor="hand1")
-
 btnSupprimerEnregistrement = Button(
     widget1,
     text="Supprimer l'enregistrement",
@@ -319,6 +312,15 @@ btnSupprimerEnregistrement = Button(
     command=supprimer_enregistrement,
 )
 btnSupprimerEnregistrement.grid(row=2, column=2, pady=1)
+
+if os.stat("pyano_partition_recorded.txt").st_size == 0:
+    btnJouerEnregistrement.config(state=DISABLED)
+    btnJouerEnregistrement.config(cursor="")
+else:
+    btnJouerEnregistrement.config(state=NORMAL)
+    btnJouerEnregistrement.config(cursor="hand1")
+    btnSupprimerEnregistrement.config(state=NORMAL)
+    btnSupprimerEnregistrement.config(state=NORMAL)
 
 btnJouerFichier = Button(
     widget4,
