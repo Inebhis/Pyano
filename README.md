@@ -3,9 +3,9 @@
 ***Pyano*** est un projet développé par Inebhis en Python, reproduisant un piano avec quelques features.
 
 Features :
-  * Rejouer les 20 dernières notes jouées.
+  * Rejouer les 20 dernières notes.
   * Enregistrer ce qui a été joué.
-  * Importer sa propre partition.
+  * Importer et jouer sa propre partition.
 
 Pour pouvoir utiliser Pyano, vous devrez nécessiter de [Python](https://www.python.org/downloads/) d'installé ainsi que [Pygame](https://www.pygame.org/wiki/GettingStarted).
 
